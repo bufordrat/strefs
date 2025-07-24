@@ -19,7 +19,9 @@ module ST = struct
     let statey s = pure x s in
     ST (statey, None)
 
-  (* let bind (ST (statey, state1)) k = *)
+  (* yeah, kinda got nothing right now for bind *)
+  
+(* let bind (ST (statey, state1)) k = *)
   (*   let ( result1, state2 ) = statey state1 *)
   (*   in match k result1 with *)
   (*        ST (statey2, state3) *)
