@@ -1,5 +1,3 @@
-let message = "Your wish is granted.  Long live Jambi."
-
 type realworld = RealWorld
 
 module State = struct
