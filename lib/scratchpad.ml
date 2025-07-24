@@ -1,5 +1,6 @@
 let message = "Your wish is granted.  Long live Jambi."
 
+type realworld = RealWorld
 
 module State = struct
   type ('s, 'a) t = 's -> 'a * 's
@@ -12,12 +13,9 @@ end
 
 module ST = struct
   type 'a st = ST : ('s, 'a) State.t * 's -> 'a st
+  (* let pure = ??? *)
 end
 
 module STRef = struct
   type 'a stref = STRef : 's * 'a ref -> 'a stref
 end
-
-(* Local Variables: *)
-(* mode: tuareg *)
-(* End: *)
