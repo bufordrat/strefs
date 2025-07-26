@@ -1,7 +1,4 @@
 module ST = struct
-
-  type realworld = RW : 'a -> realworld
-
   type 'a st = ST : 's * 'a -> 'a st
   type 'a stref = STRef : 's option * 'a ref -> 'a stref
 
@@ -15,7 +12,6 @@ module ST = struct
   let modifystref (STRef (s, rf)) f =
     rf := f !rf ;
     ST (s, ())
-
 end
 
 (* module STRef = struct *)
