@@ -13,7 +13,3 @@ module ST = struct
     rf := f !rf ;
     ST (s, ())
 end
-
-(* module STRef = struct *)
-(*   type 'a stref = STRef : 's * 'a ref -> 'a stref *)
-(* end *)
